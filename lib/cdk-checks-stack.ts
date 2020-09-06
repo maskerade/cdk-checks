@@ -8,11 +8,12 @@ export class CdkChecksStack extends cdk.Stack {
     super(scope, id, props);
 
     const queue = new sqs.Queue(this, 'CdkChecksQueue', {
-      visibilityTimeout: cdk.Duration.seconds(300)
+      visibilityTimeout: cdk.Duration.seconds(300),
+      encryption: sqs.QueueEncryption.KMS
     });
 
-    const topic = new sns.Topic(this, 'CdkChecksTopic');
+    //const topic = new sns.Topic(this, 'CdkChecksTopic');
 
-    topic.addSubscription(new subs.SqsSubscription(queue));
+    //topic.addSubscription(new subs.SqsSubscription(queue));
   }
 }
