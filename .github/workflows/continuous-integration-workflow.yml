@@ -21,3 +21,7 @@ jobs:
       uses: scottbrenner/cfn-lint-action@master
       with:
         args: "cdk.out/*.template.json"
+    
+    - name: cfn-guard-action
+      uses: maskerade/cfn-guard-action@v1
+
