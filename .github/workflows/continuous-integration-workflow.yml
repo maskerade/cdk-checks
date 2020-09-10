@@ -18,5 +18,5 @@ jobs:
         cdk_version: '1.62.0'
     
     - name: cfn-guard-action
-      uses: maskerade/cfn-guard-action@v11
+      uses: maskerade/cfn-guard-action@v12
 
