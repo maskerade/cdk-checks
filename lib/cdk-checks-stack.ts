@@ -9,7 +9,7 @@ export class CdkChecksStack extends cdk.Stack {
 
     const queue = new sqs.Queue(this, 'CdkChecksQueue', {
       visibilityTimeout: cdk.Duration.seconds(300),
-      encryption: sqs.QueueEncryption.KMS
+      //encryption: sqs.QueueEncryption.KMS
     });
 
     //const topic = new sns.Topic(this, 'CdkChecksTopic');
