@@ -23,5 +23,5 @@ jobs:
         args: "cdk.out/*.template.json"
     
     - name: cfn-guard-action
-      uses: maskerade/cfn-guard-action@v10
+      uses: maskerade/cfn-guard-action@v11
 
